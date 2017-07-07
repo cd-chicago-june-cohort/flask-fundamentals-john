@@ -7,18 +7,12 @@
     <title>Form Test Index</title>
 </head>
 <body>
-    <h3>My flask template with embedded Python-like code</h3>
-    <!-- this will output the value of our phrase variable -->
-    <p>Phrase: {{ phrase }}</p>
-    <!-- this will output the value of our times variable -->
-    <p>Times: {{ times }}</p>
-    <!-- here is an example of embedding a for-loop in our code -->
-    {% for x in range(0,times): %}
-    <p>{{ phrase }}</p>
-    {% endfor %}
-    <!-- here is an example of embedding an if statement in our code -->
-    {% if phrase == "hello" %}
-    <p>The phrase says hello</p>
-    {% endif %}
-    </body>
+      <h1>Index Page</h1>
+      <h3>Create a User</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/users' method='post'>
+          Name: <input type='text' name='name'>
+          Email: <input type='text' name='email'>
+          <input type='submit' value='create user'>
+      </form>
 </html>
