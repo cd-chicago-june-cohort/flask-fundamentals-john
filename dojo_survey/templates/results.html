@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <div class="container" id="results_container">
+        <h1>Submitted info</h1>
+        <h2>Name:       {{template_name}}</h2>
+        <h2>Location:       {{template_location}}</h2>
+        <h2>Favorite language:       {{template_language}}</h2>
+        <p>{{template_comment}}</p>
+        <form action="/">
+            <input type="submit" name="go_back" value="Go Back">
+        </form>
+    </div>
+</body>
+</html>
