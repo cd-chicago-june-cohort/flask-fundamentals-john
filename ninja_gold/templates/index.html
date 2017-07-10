@@ -46,7 +46,15 @@
             </form>
         </div>
         <p>Activities</p>
-        <textarea>{{ my_message }}</textarea>
+        <textarea>
+
+            {% for msg in my_messages %}
+
+                {{ msg }}
+
+            {% endfor %}
+
+        </textarea>
     </div>
 </body>
 </html>
