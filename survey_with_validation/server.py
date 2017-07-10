@@ -15,8 +15,10 @@ def result():
 
     if len(server_name) < 1:
         return render_template("error.html", your_error="You must enter a name!")
-    elif len(server_comment) < 120:
-        return render_template("error.html", your_error="You must enter a comment of at least 120 characters!")
+    elif len(server_comment) < 1:
+        return render_template("error.html", your_error="You must enter a comment!")
+    elif len(server_comment) > 120:
+        return render_template("error.html", your_error="Comment cannot exceed 120 characters!")
     else:
         return render_template("results.html", template_name=server_name, template_location=server_location, template_language=server_language, template_comment=server_comment)
 
